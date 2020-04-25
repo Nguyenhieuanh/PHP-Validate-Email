@@ -1,7 +1,9 @@
 <?php
 $pattern = '/^[A-Za-z0-9]+[A-Za-z0-9.]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/';
 if ($_SERVER['REQUEST_METHOD'] == 'GET')
-    $email = $_REQUEST['email'];
+    if (isset($_REQUEST['check'])) {
+        $email = $_REQUEST['email'];
+    }
 ?>
 <!doctype html>
 <html lang="en">
